@@ -1,12 +1,15 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=", initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
- <form method="POST">
+ <h1>ToDo App</h1>
+ <form method="POST" class="form-bg">
     {% csrf_token %}
     <label for="Name">Name:</label><br>
     <input type="text" name="task-name" id="Name"><br>
